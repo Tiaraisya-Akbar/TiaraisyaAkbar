@@ -5,21 +5,36 @@
 
     <style>
         body {
-            text-align: center;
+            margin: 0;
             font-family: Arial;
+            text-align: center;
+            background: linear-gradient(to bottom, #4facfe, #00c6ff);
+            color: white;
+        }
+
+        .galeri {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
         }
 
         .galeri img {
             width: 200px;
             margin: 10px;
-            border-radius: 10px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .galeri img:hover {
+            transform: scale(1.1);
         }
     </style>
 
 </head>
 <body>
 
-<h1>Foto Rumah</h1>
+<h1>Galeri Rumah</h1>
 
 <div class="galeri">
     <img src="rumah_sampingkanan.jpg">
@@ -29,7 +44,7 @@
 </div>
 
 <br>
-<a href="index.html">Kembali</a>
+<a href="index.html" style="color:white;">Kembali</a>
 
 </body>
 </html>
