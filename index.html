@@ -2,16 +2,40 @@
 <html>
 <head>
     <title>Website Saya</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .menu a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu a:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+
 </head>
-<body style="background-color: lightblue;">
+<body>
 
     <h1>Selamat Datang di Website Saya</h1>
 
-    <ul>
-        <li><a href="biodata.html">Biodata</a></li>
-        <li><a href="galeri.html">Rumah</a></li>
-        <li><a href="vidio.html">Video</a></li>
-    </ul>
+    <div class="menu">
+        <a href="biodata.html">Biodata</a>
+        <a href="galeri.html">Rumah</a>
+        <a href="vidio.html">Video</a>
+    </div>
 
 </body>
 </html>
