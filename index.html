@@ -120,7 +120,7 @@
 
 <!-- SOUND -->
 <audio id="sound" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b1c0d7d2.mp3?filename=sea-waves-ambient-110624.mp3" type="audio/mp3">
 </audio>
 
 <!-- LOADING -->
@@ -143,7 +143,7 @@
         </div>
 
         <br>
-        <button onclick="playSound()">🔊 Putar Suara Laut</button>
+       <button onclick="playSound()">🌬️ Putar Suara Pantai</button>
     </div>
 
 </div>
@@ -155,14 +155,13 @@
 <!-- SCRIPT -->
 <script>
     // LOADING
-    setTimeout(function() {
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("content").style.display = "flex";
+   setTimeout(function() {
+    document.getElementById("sound").play();
     }, 2000);
 
     // SOUND
     function playSound() {
-        document.getElementById("sound").play();
+    document.getElementById("sound").play();
     }
 
     // PARTIKEL BINTANG
@@ -182,5 +181,3 @@
 
 </body>
 </html>
-Tinggal bilang:
-👉 “Upgrade lagi” 😄
