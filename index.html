@@ -10,7 +10,7 @@
             overflow: hidden;
         }
 
-        /* LOADING SCREEN */
+        /* LOADING */
         #loading {
             position: fixed;
             width: 100%;
@@ -34,7 +34,7 @@
             100% {opacity: 1;}
         }
 
-        /* HALAMAN UTAMA */
+        /* MAIN CONTENT */
         #content {
             display: none;
             height: 100vh;
@@ -43,8 +43,8 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            display: flex;
             flex-direction: column;
+            display: flex;
             animation: fadeIn 2s;
         }
 
@@ -54,18 +54,11 @@
         }
 
         .box {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.1);
             padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-        }
-
-        h1 {
-            font-size: 40px;
-        }
-
-        p {
-            font-size: 18px;
+            z-index: 2;
         }
 
         .menu a {
@@ -83,8 +76,41 @@
 
         .menu a:hover {
             background: gold;
-            color: black;
             transform: scale(1.1);
+        }
+
+        /* OMBak */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 150px;
+            background: url('https://i.ibb.co/wQZVxxk/wave.png');
+            background-size: cover;
+            animation: wave 10s linear infinite;
+            opacity: 0.5;
+        }
+
+        .wave2 {
+            animation: wave 15s linear infinite reverse;
+            opacity: 0.3;
+        }
+
+        @keyframes wave {
+            from {transform: translateX(0);}
+            to {transform: translateX(-50%);}
+        }
+
+        /* PARTIKEL */
+        .star {
+            position: absolute;
+            color: white;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            from {transform: translateY(0);}
+            to {transform: translateY(-100vh);}
         }
 
     </style>
@@ -92,33 +118,69 @@
 </head>
 <body>
 
+<!-- SOUND -->
+<audio id="sound" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
 <!-- LOADING -->
 <div id="loading">
     <h1>🌊 Loading... ⭐</h1>
-    <p>Menyiapkan halaman...</p>
+    <p>Menyiapkan suasana laut...</p>
 </div>
 
 <!-- CONTENT -->
 <div id="content">
+
     <div class="box">
         <h1>🌊 Selamat Datang ⭐</h1>
-        <p>Tiaraisya Akbar</p>
+        <p>TIARAISYA AKBAR</p>
         <p>✨ Sistem Informasi Manajemen Perikanan ✨</p>
 
         <div class="menu">
             <a href="tugas1.html">📘 Tugas 1</a>
             <a href="tugas2.html">📗 Tugas 2</a>
         </div>
+
+        <br>
+        <button onclick="playSound()">🔊 Putar Suara Laut</button>
     </div>
+
 </div>
 
-<!-- SCRIPT LOADING -->
+<!-- OMBak -->
+<div class="wave"></div>
+<div class="wave wave2"></div>
+
+<!-- SCRIPT -->
 <script>
+    // LOADING
     setTimeout(function() {
         document.getElementById("loading").style.display = "none";
         document.getElementById("content").style.display = "flex";
-    }, 2000); // 2 detik
+    }, 2000);
+
+    // SOUND
+    function playSound() {
+        document.getElementById("sound").play();
+    }
+
+    // PARTIKEL BINTANG
+    setInterval(() => {
+        let star = document.createElement("div");
+        star.className = "star";
+        star.innerHTML = "⭐";
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.fontSize = (10 + Math.random() * 20) + "px";
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, 5000);
+    }, 300);
 </script>
 
 </body>
 </html>
+Tinggal bilang:
+👉 “Upgrade lagi” 😄
