@@ -1,14 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tugas 2</title>
+    <title>Tugas 2 - Formulir</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to bottom, #4facfe, #00c6ff);
+            padding: 20px;
+        }
+
+        .form {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h1>Tugas 2</h1>
-    <p>Belum dikerjakan</p>
+<div class="form">
 
-    <a href="index.html">Kembali</a>
+<h2>Formulir Data Pengguna</h2>
+
+<form>
+
+<!-- DATA DEMOGRAFI -->
+<h3>Data Demografi</h3>
+
+<label>Nama</label>
+<input type="text" placeholder="Masukkan nama">
+
+<label>Tanggal Lahir</label>
+<input type="date">
+
+<label>Alamat</label>
+<textarea placeholder="Masukkan alamat"></textarea>
+
+<label>No Telepon</label>
+<input type="tel" placeholder="08xxxx">
+
+<label>Email</label>
+<input type="email" placeholder="email@gmail.com">
+
+<label>Pendidikan</label>
+<select>
+    <option>SD</option>
+    <option>SMP</option>
+    <option>SMA</option>
+    <option>D3</option>
+    <option>S1</option>
+    <option>S2</option>
+</select>
+
+<!-- DATA BANK -->
+<h3>Data Bank</h3>
+
+<label>Nama Bank</label>
+<select>
+    <option>BCA</option>
+    <option>BRI</option>
+    <option>BNI</option>
+    <option>Mandiri</option>
+</select>
+
+<label>No Rekening</label>
+<input type="number" placeholder="Masukkan nomor rekening">
+
+<!-- DATA TRANSAKSI -->
+<h3>Data Transaksi</h3>
+
+<label>Tanggal Transaksi</label>
+<input type="date">
+
+<label>Uraian</label>
+<input type="text" placeholder="Contoh: beli makanan">
+
+<label>Jenis Transaksi</label><br>
+<input type="radio" name="jenis"> Debet
+<input type="radio" name="jenis"> Kredit
+
+<br><br>
+
+<label>Jumlah Debet</label>
+<input type="number">
+
+<label>Jumlah Kredit</label>
+<input type="number">
+
+<br>
+
+<button type="submit">Kirim</button>
+
+</form>
+
+</div>
 
 </body>
 </html>
