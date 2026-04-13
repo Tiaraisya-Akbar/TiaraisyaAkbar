@@ -3,15 +3,18 @@
 <head>
     <title>Welcome</title>
 
+    <!-- WAJIB UNTUK HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            overflow: hidden;
             color: white;
+            overflow-x: hidden;
         }
 
-        /* BACKGROUND LAUT */
+        /* BACKGROUND */
         .background {
             position: fixed;
             width: 100%;
@@ -24,16 +27,16 @@
         .wave {
             position: absolute;
             bottom: 0;
-            width: 200%;
+            width: 150%;
             height: 120px;
             background: url('https://i.ibb.co/wQZVxxk/wave.png');
             background-size: cover;
-            animation: wave 20s linear infinite;
+            animation: wave 25s linear infinite;
             opacity: 0.5;
         }
 
         .wave2 {
-            animation: wave 30s linear infinite reverse;
+            animation: wave 35s linear infinite reverse;
             opacity: 0.3;
         }
 
@@ -42,31 +45,41 @@
             to {transform: translateX(-50%);}
         }
 
-        /* KONTEN TENGAH */
+        /* CONTAINER */
         .container {
-            position: relative;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            text-align: center;
         }
 
+        /* BOX */
         .box {
             background: rgba(255,255,255,0.15);
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
-            text-align: center;
             backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 400px;
         }
 
         h1 {
+            font-size: 28px;
             margin-bottom: 10px;
         }
 
+        p {
+            font-size: 16px;
+        }
+
+        /* MENU */
         .menu a {
             display: block;
             margin: 10px auto;
-            width: 200px;
+            width: 100%;
+            max-width: 250px;
             padding: 12px;
             background: white;
             color: #1e3c72;
@@ -78,9 +91,10 @@
 
         .menu a:hover {
             background: gold;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
+        /* BUTTON */
         button {
             margin-top: 10px;
             padding: 10px 20px;
