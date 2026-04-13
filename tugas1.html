@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tugas 1</title>
+<title>Tugas 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-            background-color: lightblue;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
+    color: white;
+    animation: fadeIn 0.8s;
+}
 
-        a {
-            display: block;
-            margin: 10px;
-        }
-    </style>
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1;}
+}
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+a.menu {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 200px;
+    background: white;
+    color: #1e3c72;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+a.menu:hover {
+    background: gold;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Tugas 1</h1>
+<nav>
+<h3>🌊 Tiaraisya Akbar</h3>
+<div>
+<a href="index.html">Home</a>
+<a href="tugas1.html">Tugas 1</a>
+</div>
+</nav>
 
-    <a href="biodata.html">Biodata</a>
-    <a href="galeri.html">Galeri Rumah</a>
-    <a href="vidio.html">Video</a>
+<div class="container">
+<h1>📘 Tugas 1</h1>
 
-    <br>
-    <a href="index.html">Kembali</a>
+<a class="menu" href="biodata.html">👤 Biodata</a>
+<a class="menu" href="galeri.html">🏠 Galeri</a>
+<a class="menu" href="vidio.html">🎥 Video</a>
+
+</div>
 
 </body>
 </html>
