@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Galeri</title>
+<title>Galeri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            text-align: center;
-            background: linear-gradient(to bottom, #4facfe, #00c6ff);
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
+    color: white;
+    animation: fadeIn 0.8s;
+}
 
-        .galeri {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px;
-        }
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
-        .galeri img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
 
-        .galeri img:hover {
-            transform: scale(1.1);
-        }
-    </style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 10px;
+    padding: 20px;
+}
 
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Galeri Rumah</h1>
+<nav>
+<h3>🌊 Tiaraisya</h3>
+<a href="tugas1.html">Kembali</a>
+</nav>
 
-<div class="galeri">
-    <img src="rumah_sampingkanan.jpg">
-    <img src="rumah_ruangtamu.jpg">
-    <img src="rumah_kamar.jpg">
-    <img src="rumah_dapur.jpg">
+<h1 style="text-align:center;">🏠 Galeri Rumah</h1>
+
+<div class="gallery">
+<img src="rumah_sampingkanan.jpg">
+<img src="rumah_ruangtamu.jpg">
+<img src="rumah_kamar.jpg">
+<img src="rumah_dapur.jpg">
 </div>
 
 <br>
