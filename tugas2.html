@@ -1,121 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tugas 2 - Formulir</title>
+<title>Tugas 2 - Formulir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial;
-            background: linear-gradient(to bottom, #4facfe, #00c6ff);
-            padding: 20px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
+    color: white;
+}
 
-        .form {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 500px;
-            margin: auto;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
 
-        h2 {
-            text-align: center;
-        }
+.container {
+    padding: 20px;
+}
 
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-        }
+form {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+}
 
-        button {
-            padding: 10px;
-            width: 100%;
-            background: #0077b6;
-            color: white;
-            border: none;
-            border-radius: 10px;
-        }
-    </style>
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
 
+button {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: #1e3c72;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: gold;
+}
+</style>
 </head>
+
 <body>
 
-<div class="form">
+<nav>
+<h3>🌊 Tiaraisya Akbar</h3>
+<a href="index.html">Home</a>
+</nav>
 
-<h2>Formulir Data Pengguna</h2>
+<div class="container">
+<h2 align="center">📗 Formulir Data</h2>
 
 <form>
 
-<!-- DATA DEMOGRAFI -->
 <h3>Data Demografi</h3>
-
-<label>Nama</label>
-<input type="text" placeholder="Masukkan nama">
-
-<label>Tanggal Lahir</label>
+<input type="text" placeholder="Nama">
 <input type="date">
+<input type="text" placeholder="Alamat">
+<input type="text" placeholder="No Telepon">
+<input type="email" placeholder="Email">
 
-<label>Alamat</label>
-<textarea placeholder="Masukkan alamat"></textarea>
-
-<label>No Telepon</label>
-<input type="tel" placeholder="08xxxx">
-
-<label>Email</label>
-<input type="email" placeholder="email@gmail.com">
-
-<label>Pendidikan</label>
 <select>
-    <option>SD</option>
-    <option>SMP</option>
-    <option>SMA</option>
-    <option>D3</option>
-    <option>S1</option>
-    <option>S2</option>
+<option>Pendidikan</option>
+<option>SMA</option>
+<option>D3</option>
+<option>S1</option>
+<option>S2</option>
+<option>S3</option>
 </select>
 
-<!-- DATA BANK -->
 <h3>Data Bank</h3>
-
-<label>Nama Bank</label>
 <select>
-    <option>BCA</option>
-    <option>BRI</option>
-    <option>BNI</option>
-    <option>Mandiri</option>
+<option>Nama Bank</option>
+<option>BRI</option>
+<option>BNI</option>
+<option>Mandiri</option>
+<option>BTN</option>
+<option>BSI</option>
+<option>BCA</option>
 </select>
 
-<label>No Rekening</label>
-<input type="number" placeholder="Masukkan nomor rekening">
+<input type="text" placeholder="Nomor Rekening">
 
-<!-- DATA TRANSAKSI -->
 <h3>Data Transaksi</h3>
-
-<label>Tanggal Transaksi</label>
 <input type="date">
+<input type="text" placeholder="Uraian Transaksi">
 
-<label>Uraian</label>
-<input type="text" placeholder="Contoh: beli makanan">
+<select>
+<option>Jenis Transaksi</option>
+<option>Debit</option>
+<option>Kredit</option>
+</select>
 
-<label>Jenis Transaksi</label><br>
-<input type="radio" name="jenis"> Debet
-<input type="radio" name="jenis"> Kredit
-
-<br><br>
-
-<label>Jumlah Debet</label>
-<input type="number">
-
-<label>Jumlah Kredit</label>
-<input type="number">
-
-<br>
+<input type="number" placeholder="Jumlah">
 
 <button type="submit">Kirim</button>
 
 </form>
-
 </div>
 
 </body>
