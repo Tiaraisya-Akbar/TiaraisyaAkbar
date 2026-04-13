@@ -21,20 +21,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 999;
         }
 
-        #loading h1 {
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0% {opacity: 1;}
-            50% {opacity: 0.3;}
-            100% {opacity: 1;}
-        }
-
-        /* MAIN CONTENT */
+        /* HALAMAN UTAMA */
         #content {
             display: none;
             height: 100vh;
@@ -43,22 +32,14 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             display: flex;
-            animation: fadeIn 2s;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            flex-direction: column;
         }
 
         .box {
             background: rgba(255,255,255,0.1);
             padding: 40px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            z-index: 2;
         }
 
         .menu a {
@@ -70,30 +51,22 @@
             color: #1e3c72;
             border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
         }
 
         .menu a:hover {
-            background: gold;
-            transform: scale(1.1);
+            background: #ccc;
         }
 
-        /* OMBak */
+        /* OMBak HALUS */
         .wave {
             position: absolute;
             bottom: 0;
-            width: 200%;
-            height: 150px;
+            width: 150%;
+            height: 100px;
             background: url('https://i.ibb.co/wQZVxxk/wave.png');
             background-size: cover;
-            animation: wave 10s linear infinite;
-            opacity: 0.5;
-        }
-
-        .wave2 {
-            animation: wave 15s linear infinite reverse;
-            opacity: 0.3;
+            animation: wave 25s linear infinite;
+            opacity: 0.4;
         }
 
         @keyframes wave {
@@ -101,41 +74,21 @@
             to {transform: translateX(-50%);}
         }
 
-        /* PARTIKEL */
-        .star {
-            position: absolute;
-            color: white;
-            animation: float 5s linear infinite;
-        }
-
-        @keyframes float {
-            from {transform: translateY(0);}
-            to {transform: translateY(-100vh);}
-        }
-
     </style>
 
 </head>
 <body>
 
-<!-- SOUND -->
-<audio id="sound" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b1c0d7d2.mp3?filename=sea-waves-ambient-110624.mp3" type="audio/mp3">
-</audio>
-
 <!-- LOADING -->
 <div id="loading">
     <h1>🌊 Loading... ⭐</h1>
-    <p>Menyiapkan suasana laut...</p>
 </div>
 
 <!-- CONTENT -->
 <div id="content">
-
     <div class="box">
-        <h1>🌊 Selamat Datang ⭐</h1>
-        <p>TIARAISYA AKBAR</p>
-        <p>✨ Sistem Informasi Manajemen Perikanan ✨</p>
+        <h1>🌊 Tiaraisya Akbar ⭐</h1>
+        <p>Sistem Informasi Manajemen Perikanan</p>
 
         <div class="menu">
             <a href="tugas1.html">📘 Tugas 1</a>
@@ -143,40 +96,29 @@
         </div>
 
         <br>
-       <button onclick="playSound()">🌬️ Putar Suara Pantai</button>
+        <button onclick="playSound()">🌬️ Suara Pantai</button>
     </div>
-
 </div>
 
 <!-- OMBak -->
 <div class="wave"></div>
-<div class="wave wave2"></div>
+
+<!-- AUDIO -->
+<audio id="sound">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b1c0d7d2.mp3" type="audio/mp3">
+</audio>
 
 <!-- SCRIPT -->
 <script>
-    // LOADING
-   setTimeout(function() {
-    document.getElementById("sound").play();
-    }, 2000);
+    // LOADING LEBIH CEPAT (1 detik)
+    setTimeout(function() {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.display = "flex";
+    }, 1000);
 
-    // SOUND
     function playSound() {
-    document.getElementById("sound").play();
+        document.getElementById("sound").play();
     }
-
-    // PARTIKEL BINTANG
-    setInterval(() => {
-        let star = document.createElement("div");
-        star.className = "star";
-        star.innerHTML = "⭐";
-        star.style.left = Math.random() * window.innerWidth + "px";
-        star.style.fontSize = (10 + Math.random() * 20) + "px";
-        document.body.appendChild(star);
-
-        setTimeout(() => {
-            star.remove();
-        }, 5000);
-    }, 300);
 </script>
 
 </body>
