@@ -3,61 +3,80 @@
 <head>
     <title>Welcome</title>
 
-    <!-- AGAR TIDAK TERPOTONG DI HP -->
+    <!-- AGAR RESPONSIVE DI HP -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            color: white;
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
-        /* BACKGROUND */
-        .background {
+        /* LOADING SCREEN */
+        #loading {
             position: fixed;
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
-            z-index: -1;
-        }
-
-        /* CONTAINER */
-        .container {
-            min-height: 100vh;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            text-align: center;
+            flex-direction: column;
+            z-index: 999;
         }
 
-        /* BOX */
+        #loading h1 {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% {opacity: 1;}
+            50% {opacity: 0.3;}
+            100% {opacity: 1;}
+        }
+
+        /* HALAMAN UTAMA */
+        #content {
+            display: none;
+            height: 100vh;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            animation: fadeIn 1s;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
         .box {
-            background: rgba(255,255,255,0.15);
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            width: 90%;
-            max-width: 400px;
+            z-index: 2;
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 32px;
         }
 
         p {
             font-size: 16px;
         }
 
-        /* MENU */
         .menu a {
             display: block;
             margin: 10px auto;
-            width: 100%;
-            max-width: 250px;
+            width: 200px;
             padding: 12px;
             background: white;
             color: #1e3c72;
@@ -69,22 +88,39 @@
 
         .menu a:hover {
             background: gold;
-            transform: scale(1.05);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        /* ⭐ BINTANG */
+        .star {
+            position: absolute;
+            color: white;
+            animation: float 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            from {transform: translateY(100vh);}
+            to {transform: translateY(-10vh);}
         }
 
     </style>
-</head>
 
+</head>
 <body>
 
-<!-- BACKGROUND -->
-<div class="background"></div>
+<!-- LOADING -->
+<div id="loading">
+    <h1>🌊 Loading... ⭐</h1>
+    <p>Menyiapkan halaman...</p>
+</div>
 
-<!-- KONTEN -->
-<div class="container">
+<!-- CONTENT -->
+<div id="content">
     <div class="box">
         <h1>🌊 Tiaraisya Akbar ⭐</h1>
-        <p>Sistem Informasi Manajemen Perikanan</p>
+        <p>✨ Sistem Informasi Manajemen Perikanan ✨</p>
 
         <div class="menu">
             <a href="tugas1.html">📘 Tugas 1</a>
@@ -92,6 +128,31 @@
         </div>
     </div>
 </div>
+
+<!-- SCRIPT -->
+<script>
+    // LOADING 1 DETIK
+    setTimeout(function() {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.display = "flex";
+    }, 1000);
+
+    // BINTANG BERGERAK
+    setInterval(() => {
+        let star = document.createElement("div");
+        star.className = "star";
+        star.innerHTML = "⭐";
+
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.fontSize = (10 + Math.random() * 20) + "px";
+
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, 8000);
+    }, 800);
+</script>
 
 </body>
 </html>
