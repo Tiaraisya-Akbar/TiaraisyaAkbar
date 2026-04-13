@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video</title>
+<title>Video</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            text-align: center;
-            font-family: Arial;
-            background: linear-gradient(to bottom, #4facfe, #00c6ff);
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
+    color: white;
+    text-align: center;
+    animation: fadeIn 0.8s;
+}
 
-        video {
-            width: 400px;
-            margin-top: 30px;
-            border-radius: 15px;
-            transition: transform 10s;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+}
 
-        video:hover {
-            transform: scale(1.2);
-        }
-    </style>
-
+video {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Video Saya</h1>
+<nav>
+<h3>🌊 Tiaraisya Akbar</h3>
+<a href="tugas1.html">Kembali</a>
+</nav>
+
+<h1>🎥 Video</h1>
 
 <video controls>
-    <source src="vidio_transisi_10detik.mp4" type="video/mp4">
+<source src="vidio_transisi_10detik.mp4" type="video/mp4">
 </video>
-
-<br><br>
-<a href="index.html" style="color:white;">Kembali</a>
 
 </body>
 </html>
