@@ -3,7 +3,6 @@
 <head>
     <title>Welcome</title>
 
-    <!-- AGAR RESPONSIVE DI HP -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -13,7 +12,7 @@
             overflow: hidden;
         }
 
-        /* LOADING SCREEN */
+        /* LOADING */
         #loading {
             position: fixed;
             width: 100%;
@@ -37,7 +36,7 @@
             100% {opacity: 1;}
         }
 
-        /* HALAMAN UTAMA */
+        /* CONTENT */
         #content {
             display: none;
             height: 100vh;
@@ -66,11 +65,7 @@
         }
 
         h1 {
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 16px;
+            font-size: 30px;
         }
 
         .menu a {
@@ -92,7 +87,7 @@
             transform: scale(1.1);
         }
 
-        /* ⭐ BINTANG */
+        /* BINTANG */
         .star {
             position: absolute;
             color: white;
@@ -106,8 +101,8 @@
         }
 
     </style>
-
 </head>
+
 <body>
 
 <!-- LOADING -->
@@ -119,25 +114,25 @@
 <!-- CONTENT -->
 <div id="content">
     <div class="box">
-        <h1>🌊Tiaraisya Akbar⭐</h1>
-        <p>✨Sistem Informasi Manajemen Perikanan✨</p>
+        <h1>🌊 Tiaraisya Akbar ⭐</h1>
+        <p>✨ Sistem Informasi Manajemen Perikanan ✨</p>
 
         <div class="menu">
             <a href="tugas1.html">📘 Tugas 1</a>
             <a href="tugas2.html">📗 Tugas 2</a>
+            <a href="tugas3.html">📙 Tugas 3</a>
+            <a href="tugas4.html">📕 Tugas 4</a>
         </div>
     </div>
 </div>
 
 <!-- SCRIPT -->
 <script>
-    // LOADING 1 DETIK
     setTimeout(function() {
         document.getElementById("loading").style.display = "none";
         document.getElementById("content").style.display = "flex";
     }, 1000);
 
-    // BINTANG BERGERAK
     setInterval(() => {
         let star = document.createElement("div");
         star.className = "star";
