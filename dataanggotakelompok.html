@@ -1,1 +1,740 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Anggota Kelompok - POKLAHSAR Kelompok 3</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI",Tahoma,sans-serif;
+    background:linear-gradient(135deg,#ffe4ef,#ffd6ec,#fff0f7);
+    color:#444;
+}
+
+header{
+    background:linear-gradient(90deg,#4f95ff,#7bb4ff);
+    color:white;
+    text-align:center;
+    padding:2rem 1rem;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size:2rem;
+    margin-bottom:.5rem;
+}
+
+header h4{
+    font-size:1.3rem;
+    margin-bottom:.5rem;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:1rem;
+    padding:.7rem 1.5rem;
+    background:white;
+    color:#4f95ff;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:600;
+}
+
+.back-btn:hover{
+    background:#ffe6f2;
+}
+
+.content-container{
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.member-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 6px 18px rgba(255,105,180,0.18);
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+    border-bottom:3px solid #4f95ff;
+    padding-bottom:10px;
+}
+
+.card-header h2{
+    color:#337fd6;
+}
+
+.badge{
+    background:#4f95ff;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.info{
+    margin-bottom:15px;
+    color:#555;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+.member-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:850px;
+}
+
+.member-table th{
+    background:#4f95ff;
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+.member-table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.member-table tr:nth-child(even){
+    background:#f7fbff;
+}
+
+.member-table tr:hover{
+    background:#eef6ff;
+}
+
+.ketua{
+    background:#43a047;
+    color:white;
+    padding:4px 10px;
+    border-radius:15px;
+}
+
+.sekretaris{
+    background:#fb8c00;
+    color:white;
+    padding:4px 10px;
+    border-radius:15px;
+}
+
+.bendahara{
+    background:#8e24aa;
+    color:white;
+    padding:4px 10px;
+    border-radius:15px;
+}
+
+.anggota{
+    background:#78909c;
+    color:white;
+    padding:4px 10px;
+    border-radius:15px;
+}
+
+footer{
+    background:#33a2d6;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .card-header{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SISTEM INFORMASI MANAJEMEN POKLAHSAR</h1>
+    <h4>KELOMPOK 3</h4>
+    <p>Halaman Data Anggota Kelompok</p>
+    <a href="indexx.html" class="back-btn">← Kembali ke Menu Utama</a>
+</header>
+
+<div class="content-container">
+
+<!-- POKLAHSAR BUNGA MERAH -->
+<div class="member-card">
+
+<div class="card-header">
+<h2>👥 POKLAHSAR BUNGA MERAH</h2>
+<span class="badge">11 Anggota</span>
+</div>
+
+<p class="info">
+Total anggota aktif : <strong>11 orang (Perempuan)</strong>
+</p>
+
+<div class="table-container">
+<table class="member-table">
+
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>JK</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Uswa Hasanah As'ad</td>
+<td>P</td>
+<td>45</td>
+<td>SMA</td>
+<td>Klampis Timur</td>
+<td><span class="ketua">Ketua</span></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Habibah</td>
+<td>P</td>
+<td>44</td>
+<td>SD</td>
+<td>Klampis Timur</td>
+<td><span class="sekretaris">Sekretaris</span></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ida Susanti</td>
+<td>P</td>
+<td>42</td>
+<td>SD</td>
+<td>Klampis Timur</td>
+<td><span class="bendahara">Bendahara</span></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Jumriyah</td>
+<td>P</td>
+<td>38</td>
+<td>SMP</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Sainab</td>
+<td>P</td>
+<td>36</td>
+<td>SMP</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Amina</td>
+<td>P</td>
+<td>47</td>
+<td>SD</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Nor Arofah</td>
+<td>P</td>
+<td>31</td>
+<td>SMP</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Mu'minah</td>
+<td>P</td>
+<td>33</td>
+<td>SMP</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Rokidah</td>
+<td>P</td>
+<td>40</td>
+<td>SD</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Mutmaimah</td>
+<td>P</td>
+<td>30</td>
+<td>SMA</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Syamsyiah</td>
+<td>P</td>
+<td>34</td>
+<td>SMP</td>
+<td>Klampis Timur</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- POKLAHSAR SRIKANDI -->
+<div class="member-card">
+
+<div class="card-header">
+<h2>👥 POKLAHSAR SRIKANDI</h2>
+<span class="badge">10 Anggota</span>
+</div>
+
+<p class="info">
+Total anggota aktif : <strong>10 orang (Perempuan)</strong>
+</p>
+
+<div class="table-container">
+<table class="member-table">
+
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>JK</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Sunarsih S</td>
+<td>P</td>
+<td>-</td>
+<td>S1</td>
+<td>Desa Puuhopa</td>
+<td><span class="ketua">Ketua</span></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Yanti</td>
+<td>P</td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="sekretaris">Sekretaris</span></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ira Yusnita</td>
+<td>P</td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="bendahara">Bendahara</span></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Juliasih</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Cici</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Cucu R</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Rohma</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Neneng</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Partini</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Titi M</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+  
+<!-- POKLAHSAR SRIKANDI -->
+<div class="member-card">
+
+<div class="card-header">
+<h2>👥 POKLAHSAR SRIKANDI</h2>
+<span class="badge">10 Anggota</span>
+</div>
+
+<p class="info">
+Total anggota aktif : <strong>10 orang (Perempuan)</strong>
+</p>
+
+<div class="table-container">
+<table class="member-table">
+
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>JK</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Sunarsih S</td>
+<td>P</td>
+<td>-</td>
+<td>S1</td>
+<td>Desa Puuhopa</td>
+<td><span class="ketua">Ketua</span></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Yanti</td>
+<td>P</td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="sekretaris">Sekretaris</span></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ira Yusnita</td>
+<td>P</td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="bendahara">Bendahara</span></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Juliasih</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Cici</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Cucu R</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Rohma</td>
+<td>P</td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Neneng</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Partini</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Titi M</td>
+<td>P</td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+  
+<!-- POKLAHSAR WAROH -->
+<div class="member-card">
+
+<div class="card-header">
+<h2>👥 POKLAHSAR WAROH</h2>
+<span class="badge">10 Anggota</span>
+</div>
+
+<p class="info">
+Total anggota aktif : <strong>10 orang (Perempuan)</strong>
+</p>
+
+<div class="table-container">
+<table class="member-table">
+
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>JK</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Maenah</td>
+<td>P</td>
+<td>34</td>
+<td>SLTA</td>
+<td>Petak</td>
+<td><span class="ketua">Ketua</span></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Suryati</td>
+<td>P</td>
+<td>26</td>
+<td>SLTP</td>
+<td>Petak</td>
+<td><span class="sekretaris">Sekretaris</span></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ria Hartini</td>
+<td>P</td>
+<td>28</td>
+<td>SLTP</td>
+<td>Petak</td>
+<td><span class="bendahara">Bendahara</span></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Fatmawati</td>
+<td>P</td>
+<td>32</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Indayani</td>
+<td>P</td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Saeraah</td>
+<td>P</td>
+<td>36</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Ani</td>
+<td>P</td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Seniah</td>
+<td>P</td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Ani Maya Sopa</td>
+<td>P</td>
+<td>28</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Habibbahurripa'ah</td>
+<td>P</td>
+<td>38</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="anggota">Anggota</span></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Kelompok 3 POKLAHSAR
+</footer>
+
+</body>
+</html>
