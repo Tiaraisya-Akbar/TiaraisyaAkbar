@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data Anggota Kelompok - POKLAHSAR Kelompok 3</title>
+<title>Data Anggota Kelompok</title>
 
 <style>
 
@@ -15,90 +15,81 @@
 }
 
 body{
-    font-family:"Segoe UI",Tahoma,sans-serif;
-    background:#f4f8fc;
-    color:#444;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(to bottom,#1e3c72,#2a5298,#6c757d);
+    color:white;
     min-height:100vh;
 }
 
+/* HEADER */
 header{
-    background:linear-gradient(90deg,#4f95ff,#7bb4ff);
-    color:white;
     text-align:center;
-    padding:2rem 1rem;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    padding:30px 20px;
+    background:rgba(0,0,0,0.2);
 }
 
 header h1{
-    font-size:2rem;
-    margin-bottom:.5rem;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
-header h4{
-    font-size:1.3rem;
-    margin-bottom:.5rem;
-    font-weight:500;
+header h2{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#ffd700;
 }
 
 header p{
-    opacity:.9;
+    font-size:16px;
 }
 
 .back-btn{
     display:inline-block;
-    margin-top:1rem;
-    padding:.7rem 1.5rem;
+    margin-top:15px;
+    padding:10px 20px;
     background:white;
-    color:#4f95ff;
+    color:#1e3c72;
     text-decoration:none;
-    border-radius:25px;
-    font-weight:600;
-    transition:.3s;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
 .back-btn:hover{
-    background:#eef6ff;
+    background:gold;
+    color:black;
 }
 
-.content-container{
+/* CONTAINER */
+.container{
+    width:95%;
     max-width:1200px;
-    margin:3rem auto;
-    padding:0 1.5rem;
+    margin:30px auto;
 }
 
-.data-card{
-    background:white;
-    border-radius:18px;
-    padding:2rem;
-    box-shadow:0 6px 18px rgba(79,149,255,.15);
-    margin-bottom:2rem;
-}
-
-.data-card h2{
-    color:#337fd6;
-    margin-bottom:1.5rem;
-    font-size:1.8rem;
-    border-bottom:3px solid #4f95ff;
-    padding-bottom:.8rem;
-}
-
-.data-info{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:1.5rem;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.badge{
-    background:#4f95ff;
-    color:white;
-    padding:.5rem 1rem;
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:25px;
     border-radius:20px;
-    font-weight:600;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
+.card h2{
+    margin-bottom:20px;
+    color:#ffd700;
+    border-bottom:2px solid rgba(255,255,255,0.3);
+    padding-bottom:10px;
+}
+
+.info-note{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+/* TABLE */
 .table-container{
     overflow-x:auto;
 }
@@ -106,85 +97,95 @@ header p{
 .data-table{
     width:100%;
     border-collapse:collapse;
-    min-width:850px;
-}
-
-.data-table thead{
-    background:linear-gradient(90deg,#4f95ff,#7bb4ff);
-    color:white;
+    min-width:900px;
 }
 
 .data-table th{
-    padding:1rem;
-    text-align:center;
+    background:rgba(255,215,0,0.25);
+    color:white;
+    padding:12px;
+    border:1px solid rgba(255,255,255,0.2);
 }
 
 .data-table td{
-    padding:.9rem;
-    border-bottom:1px solid #e8f0f7;
+    padding:10px;
     text-align:center;
+    border:1px solid rgba(255,255,255,0.15);
 }
 
 .data-table tbody tr:nth-child(even){
-    background:#f8fbff;
+    background:rgba(255,255,255,0.05);
 }
 
 .data-table tbody tr:hover{
-    background:#eef6ff;
+    background:rgba(255,255,255,0.12);
 }
 
-.gender-female{
-    background:#fce4ec;
-    color:#c2185b;
-    padding:4px 10px;
-    border-radius:12px;
-    font-size:.85rem;
-    font-weight:600;
-}
-
-.gender-male{
-    background:#e3f2fd;
-    color:#1565c0;
-    padding:4px 10px;
-    border-radius:12px;
-    font-size:.85rem;
-    font-weight:600;
-}
-
-.position-badge{
-    background:#43a047;
+/* BADGE */
+.badge-pink{
+    background:#e91e63;
     color:white;
-    padding:5px 12px;
+    padding:5px 10px;
     border-radius:15px;
-    font-size:.85rem;
-    font-weight:600;
+    font-size:12px;
 }
 
-.position-member{
-    background:#78909c;
-}
-
-footer{
-    margin-top:4rem;
-    text-align:center;
-    padding:1.2rem;
-    background:#33a2d6;
+.badge-male{
+    background:#2196f3;
     color:white;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:12px;
+}
+
+.badge-success{
+    background:#4caf50;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+.badge-warning{
+    background:#ff9800;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+.badge-member{
+    background:#607d8b;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+.badge{
+    background:#3f51b5;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+    margin-top:30px;
 }
 
 @media(max-width:768px){
 
-.data-card{
-    padding:1.2rem;
-}
-
-.data-info{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
 header h1{
-    font-size:1.6rem;
+    font-size:24px;
+}
+
+header h2{
+    font-size:18px;
+}
+
+.card{
+    padding:15px;
 }
 
 }
@@ -195,25 +196,27 @@ header h1{
 <body>
 
 <header>
-<h1>SISTEM INFORMASI MANAJEMEN PERIKANAN</h1>
-<h4>KELOMPOK 3 POKLAHSAR</h4>
-<p>Halaman Data Anggota Kelompok</p>
 
-<a href="indexx.html" class="back-btn">
-← Kembali
+<h1>👥 DATA ANGGOTA KELOMPOK</h1>
+<h2>KELOMPOK 3 POKLAHSAR</h2>
+<p>Sistem Informasi Manajemen Perikanan</p>
+
+<a href="tugasakhir.html" class="back-btn">
+← Kembali ke Menu Utama
 </a>
+
 </header>
 
-<div class="content-container">
+<div class="container">
 
 <!-- POKLAHSAR BUNGA MERAH -->
-<div class="data-card">
+<div class="card">
 
-<h2>👥 Data Anggota Kelompok POKLAHSAR BUNGA MERAH</h2>
+<h2>🌺 POKLAHSAR BUNGA MERAH</h2>
 
-<div class="data-info">
-<p>Total anggota aktif : <strong>11 orang (Perempuan)</strong></p>
-<span class="badge">11 Anggota</span>
+<div class="info-note">
+<strong>Total Anggota :</strong> 11 Orang<br>
+<strong>Komposisi :</strong> 11 Perempuan
 </div>
 
 <div class="table-container">
@@ -224,7 +227,7 @@ header h1{
 <tr>
 <th>No</th>
 <th>Nama Lengkap</th>
-<th>JK</th>
+<th>Jenis Kelamin</th>
 <th>Umur</th>
 <th>Pendidikan</th>
 <th>Alamat</th>
@@ -237,534 +240,534 @@ header h1{
 <tr>
 <td>1</td>
 <td>Uswa Hasanah As'ad</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>45</td>
 <td>SMA</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge">Ketua</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-success">Ketua</span></td>
 </tr>
 
 <tr>
 <td>2</td>
 <td>Habibah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>44</td>
 <td>SD</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge">Sekretaris</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge">Sekretaris</span></td>
 </tr>
 
 <tr>
 <td>3</td>
 <td>Ida Susanti</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>42</td>
 <td>SD</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge">Bendahara</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-warning">Bendahara</span></td>
 </tr>
 
 <tr>
 <td>4</td>
 <td>Jumriyah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>38</td>
 <td>SMP</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>5</td>
 <td>Sainab</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>36</td>
 <td>SMP</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>6</td>
 <td>Amina</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>47</td>
 <td>SD</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>7</td>
 <td>Nor Arofah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>31</td>
 <td>SMP</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>8</td>
 <td>Mu'minah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>33</td>
 <td>SMP</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>9</td>
 <td>Rokidah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>40</td>
 <td>SD</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>10</td>
 <td>Mutmaimah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>30</td>
 <td>SMA</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 <tr>
 <td>11</td>
 <td>Syamsyiah</td>
-<td><span class="gender-female">Perempuan</span></td>
+<td><span class="badge-pink">Perempuan</span></td>
 <td>34</td>
 <td>SMP</td>
-<td>Desa Klampis Timur</td>
-<td><span class="position-badge position-member">Anggota</span></td>
+<td>Klampis Timur</td>
+<td><span class="badge-member">Anggota</span></td>
 </tr>
 
 </tbody>
+
 </table>
 
 </div>
 </div>
 
 <!-- POKLAHSAR SRIKANDI -->
-<div class="data-card">
+<div class="card">
 
-  <h2>👥 Data Anggota Kelompok POKLAHSAR SRIKANDI</h2>
+<h2>🐟 POKLAHSAR SRIKANDI</h2>
 
-  <div class="info-note">
-    <p>
-      <strong>Total Anggota :</strong> 10 Orang <br>
-      <strong>Komposisi :</strong> 10 Perempuan
-    </p>
-  </div>
+<div class="info-note">
+<strong>Total Anggota :</strong> 10 Orang<br>
+<strong>Komposisi :</strong> 10 Perempuan
+</div>
 
-  <div class="table-container">
-    <table class="data-table">
+<div class="table-container">
 
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama Lengkap</th>
-          <th>Jenis Kelamin</th>
-          <th>Umur</th>
-          <th>Pendidikan</th>
-          <th>Alamat</th>
-          <th>Jabatan</th>
-        </tr>
-      </thead>
+<table class="data-table">
 
-      <tbody>
+<thead>
+<tr>
+<th>No</th>
+<th>Nama Lengkap</th>
+<th>Jenis Kelamin</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
 
-        <tr>
-          <td>1</td>
-          <td>Sunarsih, S.</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>S1</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-success">Ketua</span></td>
-        </tr>
+<tbody>
 
-        <tr>
-          <td>2</td>
-          <td>Yanti</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMA</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge">Sekretaris</span></td>
-        </tr>
+<tr>
+<td>1</td>
+<td>Sunarsih, S.</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>S1</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-success">Ketua</span></td>
+</tr>
 
-        <tr>
-          <td>3</td>
-          <td>Ira Yusnita</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMA</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-warning">Bendahara</span></td>
-        </tr>
+<tr>
+<td>2</td>
+<td>Yanti</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge">Sekretaris</span></td>
+</tr>
 
-        <tr>
-          <td>4</td>
-          <td>Juliasih</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMP</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>3</td>
+<td>Ira Yusnita</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMA</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-warning">Bendahara</span></td>
+</tr>
 
-        <tr>
-          <td>5</td>
-          <td>Cici</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMP</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>4</td>
+<td>Juliasih</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>6</td>
-          <td>Cucu R</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMP</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>5</td>
+<td>Cici</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>7</td>
-          <td>Rohma</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SMP</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>6</td>
+<td>Cucu R</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>8</td>
-          <td>Neneng</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SD</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>7</td>
+<td>Rohma</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SMP</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>9</td>
-          <td>Partini</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SD</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>8</td>
+<td>Neneng</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>10</td>
-          <td>Titi M</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>-</td>
-          <td>SD</td>
-          <td>Desa Puuhopa</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>9</td>
+<td>Partini</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-      </tbody>
+<tr>
+<td>10</td>
+<td>Titi M</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>-</td>
+<td>SD</td>
+<td>Desa Puuhopa</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-    </table>
-  </div>
+</tbody>
+
+</table>
 
 </div>
-  
+</div>
+
 <!-- POKLAHSAR SUMBER REJEKI -->
-<div class="data-card">
+<div class="card">
 
-  <h2>👥 Data Anggota Kelompok POKLAHSAR SUMBER REJEKI</h2>
+<h2>🌊 POKLAHSAR SUMBER REJEKI</h2>
 
-  <div class="info-note">
-    <p>
-      <strong>Total Anggota :</strong> 11 Orang <br>
-      <strong>Komposisi :</strong> 1 Laki-laki dan 10 Perempuan
-    </p>
-  </div>
+<div class="info-note">
+<strong>Total Anggota :</strong> 11 Orang<br>
+<strong>Komposisi :</strong> 1 Laki-laki dan 10 Perempuan
+</div>
 
-  <div class="table-container">
-    <table class="data-table">
+<div class="table-container">
 
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama Lengkap</th>
-          <th>Jenis Kelamin</th>
-          <th>Umur</th>
-          <th>Pendidikan</th>
-          <th>Alamat</th>
-          <th>Jabatan</th>
-        </tr>
-      </thead>
+<table class="data-table">
 
-      <tbody>
+<thead>
+<tr>
+<th>No</th>
+<th>Nama Lengkap</th>
+<th>Jenis Kelamin</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
 
-        <tr>
-          <td>1</td>
-          <td>Sarwo</td>
-          <td><span class="badge badge-male">Laki-laki</span></td>
-          <td>52</td>
-          <td>SMA</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-success">Ketua</span></td>
-        </tr>
+<tbody>
 
-        <tr>
-          <td>2</td>
-          <td>Wiwin Sunarti</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>37</td>
-          <td>SMP</td>
-          <td>Jipangulu</td>
-          <td><span class="badge">Sekretaris</span></td>
-        </tr>
+<tr>
+<td>1</td>
+<td>Sarwo</td>
+<td><span class="badge-male">Laki-laki</span></td>
+<td>52</td>
+<td>SMA</td>
+<td>Jipangulu</td>
+<td><span class="badge-success">Ketua</span></td>
+</tr>
 
-        <tr>
-          <td>3</td>
-          <td>Kartini</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>53</td>
-          <td>SD</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-warning">Bendahara</span></td>
-        </tr>
+<tr>
+<td>2</td>
+<td>Wiwin Sunarti</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>37</td>
+<td>SMP</td>
+<td>Jipangulu</td>
+<td><span class="badge">Sekretaris</span></td>
+</tr>
 
-        <tr>
-          <td>4</td>
-          <td>Semiati</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>39</td>
-          <td>SMP</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>3</td>
+<td>Kartini</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>53</td>
+<td>SD</td>
+<td>Jipangulu</td>
+<td><span class="badge-warning">Bendahara</span></td>
+</tr>
 
-        <tr>
-          <td>5</td>
-          <td>Sri Sumari</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>70</td>
-          <td>SD</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>4</td>
+<td>Semiati</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>39</td>
+<td>SMP</td>
+<td>Jipangulu</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>6</td>
-          <td>Warti A</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>61</td>
-          <td>SD</td>
-          <td>Ngelo</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>5</td>
+<td>Sri Sumari</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>70</td>
+<td>SD</td>
+<td>Jipangulu</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>7</td>
-          <td>Supinah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>76</td>
-          <td>Tidak Sekolah</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>6</td>
+<td>Warti A</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>61</td>
+<td>SD</td>
+<td>Ngelo</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>8</td>
-          <td>Sariyah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>65</td>
-          <td>SD</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>7</td>
+<td>Supinah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>76</td>
+<td>Tidak Sekolah</td>
+<td>Jipangulu</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>9</td>
-          <td>Warti B</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>63</td>
-          <td>SD</td>
-          <td>Ngelo</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>8</td>
+<td>Sariyah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>65</td>
+<td>SD</td>
+<td>Jipangulu</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>10</td>
-          <td>Jirah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>59</td>
-          <td>SD</td>
-          <td>Ngelo</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>9</td>
+<td>Warti B</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>63</td>
+<td>SD</td>
+<td>Ngelo</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>11</td>
-          <td>Sulasri</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>41</td>
-          <td>SMP</td>
-          <td>Jipangulu</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>10</td>
+<td>Jirah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>59</td>
+<td>SD</td>
+<td>Ngelo</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-      </tbody>
+<tr>
+<td>11</td>
+<td>Sulasri</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>41</td>
+<td>SMP</td>
+<td>Jipangulu</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-    </table>
-  </div>
+</tbody>
+
+</table>
 
 </div>
-  
+</div>
+
 <!-- POKLAHSAR WAROH -->
-<div class="data-card">
+<div class="card">
 
-  <h2>👥 Data Anggota Kelompok POKLAHSAR WAROH</h2>
+<h2>⭐ POKLAHSAR WAROH</h2>
 
-  <div class="info-note">
-    <p>
-      <strong>Total Anggota :</strong> 10 Orang <br>
-      <strong>Komposisi :</strong> 10 Perempuan
-    </p>
-  </div>
+<div class="info-note">
+<strong>Total Anggota :</strong> 10 Orang<br>
+<strong>Komposisi :</strong> 10 Perempuan
+</div>
 
-  <div class="table-container">
-    <table class="data-table">
+<div class="table-container">
 
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama Lengkap</th>
-          <th>Jenis Kelamin</th>
-          <th>Umur</th>
-          <th>Pendidikan</th>
-          <th>Alamat</th>
-          <th>Jabatan</th>
-        </tr>
-      </thead>
+<table class="data-table">
 
-      <tbody>
+<thead>
+<tr>
+<th>No</th>
+<th>Nama Lengkap</th>
+<th>Jenis Kelamin</th>
+<th>Umur</th>
+<th>Pendidikan</th>
+<th>Alamat</th>
+<th>Jabatan</th>
+</tr>
+</thead>
 
-        <tr>
-          <td>1</td>
-          <td>Maenah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>34</td>
-          <td>SLTA</td>
-          <td>Petak</td>
-          <td><span class="badge badge-success">Ketua</span></td>
-        </tr>
+<tbody>
 
-        <tr>
-          <td>2</td>
-          <td>Suryati</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>26</td>
-          <td>SLTP</td>
-          <td>Petak</td>
-          <td><span class="badge">Sekretaris</span></td>
-        </tr>
+<tr>
+<td>1</td>
+<td>Maenah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>34</td>
+<td>SLTA</td>
+<td>Petak</td>
+<td><span class="badge-success">Ketua</span></td>
+</tr>
 
-        <tr>
-          <td>3</td>
-          <td>Ria Hartini</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>28</td>
-          <td>SLTP</td>
-          <td>Petak</td>
-          <td><span class="badge badge-warning">Bendahara</span></td>
-        </tr>
+<tr>
+<td>2</td>
+<td>Suryati</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>26</td>
+<td>SLTP</td>
+<td>Petak</td>
+<td><span class="badge">Sekretaris</span></td>
+</tr>
 
-        <tr>
-          <td>4</td>
-          <td>Fatmawati</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>32</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>3</td>
+<td>Ria Hartini</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>28</td>
+<td>SLTP</td>
+<td>Petak</td>
+<td><span class="badge-warning">Bendahara</span></td>
+</tr>
 
-        <tr>
-          <td>5</td>
-          <td>Indayani</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>30</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>4</td>
+<td>Fatmawati</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>32</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>6</td>
-          <td>Saeraah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>36</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>5</td>
+<td>Indayani</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>7</td>
-          <td>Ani</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>30</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>6</td>
+<td>Saeraah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>36</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>8</td>
-          <td>Seniah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>30</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>7</td>
+<td>Ani</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>9</td>
-          <td>Ani Maya Sopa</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>28</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>8</td>
+<td>Seniah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>30</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-        <tr>
-          <td>10</td>
-          <td>Habibbahurripa'ah</td>
-          <td><span class="badge badge-pink">Perempuan</span></td>
-          <td>38</td>
-          <td>SD</td>
-          <td>Petak</td>
-          <td><span class="badge badge-member">Anggota</span></td>
-        </tr>
+<tr>
+<td>9</td>
+<td>Ani Maya Sopa</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>28</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-      </tbody>
+<tr>
+<td>10</td>
+<td>Habibbahurripa'ah</td>
+<td><span class="badge-pink">Perempuan</span></td>
+<td>38</td>
+<td>SD</td>
+<td>Petak</td>
+<td><span class="badge-member">Anggota</span></td>
+</tr>
 
-    </table>
-  </div>
+</tbody>
+
+</table>
+
+</div>
+</div>
 
 </div>
 
