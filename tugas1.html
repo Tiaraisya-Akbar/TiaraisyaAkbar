@@ -35,25 +35,115 @@ nav a:hover {
     color: gold;
 }
 
-.container {
-    text-align: center;
-    padding: 50px 20px;
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:rgba(0,0,0,0.2);
 }
 
-a.menu {
-    display: block;
-    margin: 10px auto;
-    padding: 12px;
-    width: 200px;
-    background: white;
-    color: #1e3c72;
-    border-radius: 10px;
-    text-decoration: none;
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-a.menu:hover {
-    background: gold;
+header h2{
+    color:#ffd700;
+    margin-bottom:10px;
 }
+
+header p{
+    opacity:.9;
+}
+
+/* TOMBOL KEMBALI */
+
+.back-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:white;
+    color:#1e3c72;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#ffd700;
+    color:black;
+}
+
+/* CONTAINER */
+
+.container{
+    min-height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+/* CARD */
+
+.card{
+    width:100%;
+    max-width:700px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#ffd700;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+/* MENU */
+
+.menu{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:100%;
+    max-width:450px;
+
+    margin:15px auto !important;
+    padding:18px !important;
+
+    background:rgba(255,255,255,0.08) !important;
+    color:white !important;
+
+    border-radius:15px !important;
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.menu:hover{
+    background:rgba(255,255,255,0.2) !important;
+    transform:translateY(-4px);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.25);
+}
+    
 </style>
 </head>
 
@@ -75,7 +165,12 @@ a.menu:hover {
 
     <div class="card">
 
-        <h2>📂 Menu Tugas 1</h2>
+       <h2>📂 Menu Tugas 1</h2>
+
+<p style="margin-bottom:25px;line-height:1.8;">
+    Halaman ini berisi tugas dasar pembuatan website yang terdiri dari
+    biodata pribadi, galeri foto, dan video pembelajaran.
+</p>
 
         <a class="menu" href="biodata.html">
             👤 Biodata
