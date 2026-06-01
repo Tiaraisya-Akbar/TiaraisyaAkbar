@@ -64,6 +64,70 @@
             z-index: 2;
         }
 
+        .box{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+padding:50px;
+border-radius:25px;
+width:90%;
+max-width:700px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.profile-icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.box h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.box h3{
+color:#ffd700;
+margin-bottom:10px;
+font-weight:normal;
+}
+
+.subtitle{
+margin-bottom:30px;
+opacity:0.9;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.menu a{
+display:block;
+padding:14px;
+background:white;
+color:#1e3c72;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.menu a:hover{
+background:gold;
+transform:translateY(-3px);
+}
+
+.akhir{
+grid-column:1/-1;
+background:#ffd700 !important;
+color:black !important;
+font-size:18px;
+}
+
+.akhir:hover{
+background:white !important;
+}
+        
         h1 {
             font-size: 30px;
         }
@@ -113,23 +177,53 @@
 
 <!-- CONTENT -->
 <div id="content">
-    <div class="box">
-        <h1>🌊 Tiaraisya Akbar ⭐</h1>
-        <p>✨Sistem Informasi Manajemen Perikanan✨</p>
+   <div class="box">
 
-      <div class="menu">
+<div class="profile-icon">
+    🎓
+</div>
 
-    <a href="tugas1.html">📘 Tugas 1</a>
+<h1>Tiaraisya Akbar</h1>
 
-    <a href="tugas2.html">📗 Tugas 2</a>
+<h3>
+    Sistem Informasi Manajemen Perikanan
+</h3>
 
-    <a href="tugas3.html">📙 Tugas 3</a>
-    <a class="small-btn" href="sajiandata.html">📊 Sajian Data</a>
+<p class="subtitle">
+    Repository Tugas dan Tugas Akhir
+</p>
 
-    <a href="tugas4.html">📕 Tugas 4</a>
-    <a class="small-btn" href="sajiandata2.html">📊 Sajian Data</a>
+<div class="menu">
 
-    <a href="tugasakhir.html">📚 Tugas Akhir</a>
+    <a href="tugas1.html">
+        📘 Tugas 1
+    </a>
+
+    <a href="tugas2.html">
+        📗 Tugas 2
+    </a>
+
+    <a href="tugas3.html">
+        📙 Tugas 3
+    </a>
+
+    <a href="sajiandata.html">
+        📊 Sajian Data
+    </a>
+
+    <a href="tugas4.html">
+        📕 Tugas 4
+    </a>
+
+    <a href="sajiandata2.html">
+        📊 Sajian Data
+    </a>
+
+    <a href="tugasakhir.html" class="akhir">
+        📚 Tugas Akhir
+    </a>
+
+</div>
 
 </div>
 
