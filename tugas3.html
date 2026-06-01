@@ -5,54 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: linear-gradient(to bottom, #1e3c72, #2a5298, #6c757d);
-            color: white;
-        }
+       *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            background: rgba(0,0,0,0.3);
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(to bottom,#1e3c72,#2a5298,#6c757d);
+    color:white;
+    min-height:100vh;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+/* HEADER */
 
-        /* JUDUL */
-        h1 {
-            text-align: center;
-            margin: 10px;
-        }
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:rgba(0,0,0,0.2);
+}
 
-        /* FRAME FORM */
-        iframe {
-            width: 100%;
-            height: 90vh;
-            border: none;
-        }
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+header h2{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+header p{
+    opacity:.9;
+}
+
+/* BUTTON */
+
+.back-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:white;
+    color:#1e3c72;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#ffd700;
+    color:black;
+}
+
+/* CONTAINER */
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#ffd700;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.desc{
+    text-align:center;
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+/* IFRAME */
+
+iframe{
+    width:100%;
+    height:800px;
+    border:none;
+    border-radius:15px;
+    background:white;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.25);
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    header h2{
+        font-size:20px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    iframe{
+        height:700px;
+    }
+
+}
 
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h3>🌊 Tiaraisya Akbar</h3>
-    <a href="index.html">Home</a>
-</nav>
+<header>
 
-<h1>📙 Tugas 3</h1>
+    <h1>📙 TUGAS 3</h1>
+    <h2>GOOGLE FORM</h2>
+    <p>Sistem Informasi Manajemen Perikanan</p>
 
-<!-- GOOGLE FORM -->
-<iframe src="https://forms.gle/PemQN26fyMkAcXs9A"></iframe>
+    <a href="index.html" class="back-btn">
+        ← Kembali
+    </a>
+
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>📋 Formulir Online</h2>
+
+        <p class="desc">
+            Halaman ini menampilkan formulir online yang digunakan
+            untuk pengumpulan data secara digital.
+        </p>
+
+        <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSey-2eFu0kYvm5-WeETghyx6nBFQJuWK2EYd4_Y4EA3PBOTuQ/viewform?embedded=true">
+        </iframe>
+
+    </div>
+
+</div>
+
+<footer>
+    Tiaraisya Akbar
+</footer>
+
+</body>
 
 </body>
 </html>
