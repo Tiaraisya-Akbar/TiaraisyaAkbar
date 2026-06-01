@@ -152,12 +152,52 @@ background:white !important;
         }
 
         /* BINTANG */
-        .star {
-            position: absolute;
-            color: white;
-            animation: float 8s linear infinite;
-            opacity: 0.8;
-        }
+        .star{
+    position:absolute;
+    color:white;
+    opacity:0.8;
+    z-index:1;
+    pointer-events:none;
+    animation:float 8s linear infinite;
+}
+
+#loading{
+    transition:0.5s;
+}
+
+.box{
+    animation:zoomIn 1s ease;
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-20vh);
+        opacity:0;
+    }
+
+}
 
         @keyframes float {
             from {transform: translateY(100vh);}
@@ -229,25 +269,106 @@ background:white !important;
 
 <!-- SCRIPT -->
 <script>
-    setTimeout(function() {
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("content").style.display = "flex";
-    }, 1000);
 
-    setInterval(() => {
-        let star = document.createElement("div");
-        star.className = "star";
-        star.innerHTML = "⭐";
+// Loading
+window.onload = function(){
 
-        star.style.left = Math.random() * window.innerWidth + "px";
-        star.style.fontSize = (10 + Math.random() * 20) + "px";
+    setTimeout(function(){
 
-        document.body.appendChild(star);
+        document.getElementById("loading").style.opacity = "0";
 
-        setTimeout(() => {
-            star.remove();
-        }, 8000);
-    }, 800);
+        setTimeout(function(){
+
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "flex";
+
+        },500);
+
+    },1500);
+
+};
+
+// Bintang
+setInterval(() => {
+
+    let star = document.createElement("div");
+
+    star.className = "star";
+    star.innerHTML = "⭐";
+
+    star.style.left =
+    Math.random() * window.innerWidth + "px";
+
+    star.style.fontSize =
+    (10 + Math.random()*25) + "px";
+
+    star.style.animationDuration =
+    (6 + Math.random()*5) + "s";
+
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+
+        star.remove();
+
+    },12000);
+
+},300);
+
+// Sparkle
+setInterval(() => {
+
+    let sparkle = document.createElement("div");
+
+    sparkle.className = "star";
+    sparkle.innerHTML = "✨";
+
+    sparkle.style.left =
+    Math.random() * window.innerWidth + "px";
+
+    sparkle.style.fontSize =
+    (12 + Math.random()*20) + "px";
+
+    sparkle.style.animationDuration =
+    (5 + Math.random()*4) + "s";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+
+        sparkle.remove();
+
+    },10000);
+
+},500);
+
+// Gelembung
+setInterval(() => {
+
+    let bubble = document.createElement("div");
+
+    bubble.className = "star";
+    bubble.innerHTML = "🫧";
+
+    bubble.style.left =
+    Math.random() * window.innerWidth + "px";
+
+    bubble.style.fontSize =
+    (15 + Math.random()*25) + "px";
+
+    bubble.style.animationDuration =
+    (8 + Math.random()*5) + "s";
+
+    document.body.appendChild(bubble);
+
+    setTimeout(() => {
+
+        bubble.remove();
+
+    },12000);
+
+},700);
+
 </script>
 
 </body>
