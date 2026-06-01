@@ -8,62 +8,53 @@
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial;
-    background:linear-gradient(to bottom,#1e3c72,#2a5298,#6c757d);
-    color:white;
+.accordion{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-header{
-    text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    margin-bottom:10px;
-}
-
-.container{
-    width:90%;
-    max-width:800px;
-    margin:auto;
-}
-
-.menu{
-    background:rgba(255,255,255,0.1);
-    border-radius:20px;
-    overflow:hidden;
-    backdrop-filter:blur(10px);
-}
-
-.menu a{
-    display:block;
-    padding:18px;
-    color:white;
-    text-decoration:none;
-    border-bottom:1px solid rgba(255,255,255,0.2);
-    transition:0.3s;
-    font-size:18px;
+.accordion-btn{
+    width:100%;
+    text-align:left;
+    padding:18px 20px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:20px;
     font-weight:bold;
+    color:white;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    transition:0.3s;
 }
 
-.menu a:last-child{
-    border-bottom:none;
-}
-
-.menu a:hover{
+.accordion-btn:hover{
     background:rgba(255,255,255,0.2);
-    padding-left:30px;
-    color:gold;
 }
 
-.info{
-    margin-top:25px;
-    background:rgba(255,255,255,0.1);
-    padding:20px;
-    border-radius:20px;
-    text-align:center;
+.accordion-content{
+    display:none;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.08);
+    margin-top:-10px;
+}
+
+.accordion-content a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+    background:rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.accordion-content a:hover{
+    background:rgba(255,255,255,0.18);
+    transform:translateX(5px);
 }
 
 </style>
@@ -79,20 +70,25 @@ header h1{
 
 <div class="container">
 
-    <div class="menu">
+    <div class="accordion">
 
-        <!-- MENU INDIVIDU -->
-        <div class="menu-section">
-            <h3>👤 INDIVIDU</h3>
+        <!-- INDIVIDU -->
+        <button class="accordion-btn">
+            ▶ INDIVIDU
+        </button>
 
+        <div class="accordion-content">
             <a href="iurankelompok.html">
                 💰 Iuran Kelompok
             </a>
         </div>
 
-        <!-- MENU KELOMPOK -->
-        <div class="menu-section">
-            <h3>👥 KELOMPOK</h3>
+        <!-- KELOMPOK -->
+        <button class="accordion-btn">
+            ▶ KELOMPOK
+        </button>
+
+        <div class="accordion-content">
 
             <a href="sejarahkelompok.html">
                 📖 Sejarah Kelompok
@@ -113,6 +109,7 @@ header h1{
             <a href="hasildatakelompok.html">
                 📊 Hasil Data Kelompok
             </a>
+
         </div>
 
     </div>
