@@ -1,1 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Iuran Kelompok</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(to bottom,#1e3c72,#2a5298,#6c757d);
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px 20px;
+    background:rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+header h2{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:white;
+    color:#1e3c72;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#ffd700;
+    margin-bottom:20px;
+    border-bottom:2px solid rgba(255,255,255,0.2);
+    padding-bottom:10px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+}
+
+.stat-box h3{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+.stat-box h1{
+    font-size:28px;
+}
+
+.link-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.link-box{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.link-box h3{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#ffd700;
+    color:#1e3c72;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.dashboard{
+    width:100%;
+    height:600px;
+    border:none;
+    border-radius:15px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>💰 IURAN KELOMPOK</h1>
+<h2>Kelompok 3 POKLAHSAR</h2>
+
+<p>
+Sistem Informasi Manajemen Perikanan
+</p>
+
+<a href="index.html" class="back-btn">
+← Kembali ke Menu Utama
+</a>
+
+</header>
+
+<div class="container">
+
+<!-- BAGIAN 1 -->
+<div class="card">
+
+<h2>📈 Ringkasan Iuran Kelompok</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h3>Total Tabungan</h3>
+<h1>Rp 5.270.000</h1>
+</div>
+
+<div class="stat-box">
+<h3>Iuran Wajib</h3>
+<h1>Rp 1.930.000</h1>
+</div>
+
+<div class="stat-box">
+<h3>Iuran Sukarela</h3>
+<h1>Rp 780.000</h1>
+</div>
+
+<div class="stat-box">
+<h3>Anggota Aktif</h3>
+<h1>42</h1>
+</div>
+
+</div>
+
+</div>
+
+<!-- BAGIAN 2 -->
+<div class="card">
+
+<h2>📝 Form dan Data Iuran</h2>
+
+<div class="link-grid">
+
+<div class="link-box">
+
+<h3>📝 Form Input Iuran</h3>
+
+<p>
+Input data iuran wajib, iuran sukarela,
+dan tabungan anggota kelompok.
+</p>
+
+<a href="https://forms.gle/2Lr6B3ZSZaacdchX8"
+target="_blank"
+class="btn">
+
+Buka Form
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<h3>📊 Hasil Data Iuran</h3>
+
+<p>
+Lihat hasil pengisian dan rekapitulasi
+iuran anggota kelompok.
+</p>
+
+<a href="https://docs.google.com/spreadsheets/d/1hrpQgzlsfIiz-R87sY9QyoFtVLlHWWYkod7GwoYaICg/edit?usp=sharing"
+target="_blank"
+class="btn">
+
+Lihat Data
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<h3>📥 Download Data Iuran Kelompok</h3>
+
+<p>
+Download hasil data iuran kelompok
+dalam format Microsoft Excel.
+</p>
+
+<a href="hasiliurankelompok.xlsx"
+target="_blank"
+class="btn">
+
+Download Excel
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BAGIAN 3 -->
+<div class="card">
+
+<h2>📊 Dashboard Iuran Kelompok</h2>
+
+<p style="margin-bottom:15px;line-height:1.8;">
+
+Dashboard analisis pembayaran iuran,
+tabungan anggota, dan kontribusi kelompok.
+
+</p>
+
+<iframe
+class="dashboard"
+src="https://datastudio.google.com/embed/reporting/5facacbb-3909-4b16-9f14-cb81ad6f31a1/page/page_12345"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+<div class="card">
+
+<h2>😊 Tingkat Kepuasan Iuran Kelompok</h2>
+
+<div class="link-grid">
+
+<div class="link-box">
+
+<h3>📝 Form Tingkat Kepuasan</h3>
+
+<p>
+Berikan penilaian terhadap layanan
+Iuran Kelompok POKLAHSAR.
+</p>
+
+<a href="https://forms.gle/6MmehWU3XesuG2np6"
+target="_blank"
+class="btn">
+
+Buka Form
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<h3>📊 Hasil Tingkat Kepuasan</h3>
+
+<p>
+Lihat hasil pengisian tingkat kepuasan
+pada layanan Iuran Kelompok.
+</p>
+
+<a href="https://docs.google.com/spreadsheets/d/1Sch-VXawqMhW1_CyPN22FvwjNBxDEOdvvNLNvVFCzNI/edit?usp=sharing"
+target="_blank"
+class="btn">
+
+Lihat Hasil
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<h3>📥 Download Data Kepuasan</h3>
+
+<p>
+Download hasil tingkat kepuasan
+dalam format Microsoft Excel.
+</p>
+
+<a href="tingkatkepuasantiara.xlsx"
+target="_blank"
+class="btn">
+
+Download Excel
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+<div class="card">
+
+<h2>📈 Dashboard Tingkat Kepuasan</h2>
+
+<p style="margin-bottom:15px;line-height:1.8;">
+
+Dashboard analisis kepuasan anggota
+terhadap sistem iuran kelompok.
+
+</p>
+
+<iframe
+class="dashboard"
+src="https://datastudio.google.com/embed/reporting/b9d353c4-6e5d-4d1b-8849-f15d8553100a/page/page_12345"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+<footer>
+Tiaraisya Akbar
+</footer>
+
+</body>
+</html>
