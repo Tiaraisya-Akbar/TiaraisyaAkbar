@@ -69,6 +69,13 @@ header p{
 
 /* CARD */
 .card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+.card{
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(10px);
     padding:25px;
@@ -85,6 +92,9 @@ header p{
 }
 
 .info-note{
+    background:rgba(255,255,255,0.08);
+    padding:15px;
+    border-radius:12px;
     margin-bottom:15px;
     line-height:1.8;
 }
@@ -769,10 +779,64 @@ header h2{
 </div>
 </div>
 
+<div class="card">
+
+<h2>📂 Form dan Data Anggota Kelompok</h2>
+
+<div class="table-container">
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+">
+
+<div class="card">
+
+<h3>📝 Form Input Anggota</h3>
+
+<p style="margin-top:10px;">
+Input data anggota kelompok POKLAHSAR.
+</p>
+
+<a href="https://forms.gle/CCpKHv83BWtZxxYR6"
+target="_blank"
+class="back-btn">
+
+Buka Form
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Hasil Data Anggota</h3>
+
+<p style="margin-top:10px;">
+Lihat hasil pengisian data anggota kelompok.
+</p>
+
+<a href="https://docs.google.com/spreadsheets/d/1HN_755mmQQVjFg6XmzhN9Q_kdyLPcGCITDP8NiFmp1I/edit?usp=sharing"
+target="_blank"
+class="back-btn">
+
+Lihat Data
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+    
 </div>
 
 <footer>
-Kelompok 3 POKLAHSAR
+© Kelompok 3 POKLAHSAR<br>
 </footer>
 
 </body>
