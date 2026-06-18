@@ -115,10 +115,6 @@ header h2{
     font-size:28px;
 }
 
-.stat-box h1{
-    font-size:28px;
-}
-
 .link-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -185,36 +181,26 @@ footer{
     display:block;
 }
 
+.summary-content .card{
+    margin-top:15px;
+}
+
 .arrow{
     font-size:22px;
     font-weight:bold;
 }
 
+@media(max-width:768px){
+
+.dashboard{
+    height:500px;
+}
+
+}
+    
 </style>
 </head>
 
-<script>
-
-function toggleSummary(){
-
-const content =
-document.getElementById("summaryContent");
-
-const arrow =
-document.getElementById("arrow");
-
-content.classList.toggle("show");
-
-if(content.classList.contains("show")){
-    arrow.innerHTML = "▲";
-}else{
-    arrow.innerHTML = "▼";
-}
-
-}
-
-</script>
-    
 <body>
 
 <header>
@@ -242,11 +228,11 @@ Sistem Informasi Manajemen Perikanan
 
 <h2>📊 Ringkasan Pembayaran Kelompok</h2>
 
-<span id="arrow" class="arrow">▼</span>
+<span id="arrow" class="arrow">▲</span>
 
 </div>
 
-<div id="summaryContent" class="summary-content">
+<div id="summaryContent" class="summary-content show">
 
 <!-- BAGIAN TOTAL TABUNGAN -->
 
@@ -396,25 +382,6 @@ Lihat Data
 
 </div>
 
-<div class="link-box">
-
-<h3>📥 Download Data Iuran Kelompok</h3>
-
-<p>
-Download hasil data iuran kelompok
-dalam format Microsoft Excel.
-</p>
-
-<a href="hasilanalisisiurankelompok.xlsx"
-target="_blank"
-class="btn">
-
-Download Excel
-
-</a>
-
-</div>
-
 </div>
 
 </div>
@@ -532,6 +499,28 @@ allowfullscreen>
 © 2026 Sistem Informasi Manajemen Perikanan<br>
 Tiaraisya Akbar
 </footer>
+
+<script>
+
+function toggleSummary(){
+
+const content =
+document.getElementById("summaryContent");
+
+const arrow =
+document.getElementById("arrow");
+
+content.classList.toggle("show");
+
+if(content.classList.contains("show")){
+    arrow.innerHTML = "▲";
+}else{
+    arrow.innerHTML = "▼";
+}
+
+}
+
+</script>
 
 </body>
 </html>
