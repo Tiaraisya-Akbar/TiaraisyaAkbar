@@ -69,13 +69,18 @@
 
         /* CARD */
         .card{
-            background:rgba(255,255,255,0.12);
-            backdrop-filter:blur(10px);
-            padding:25px;
-            border-radius:20px;
-            margin-bottom:25px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.3);
-        }
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
 
         .card h2{
             margin-bottom:20px;
@@ -91,9 +96,14 @@
         }
 
         td{
-            padding:12px;
-            border-bottom:1px solid rgba(255,255,255,0.15);
-        }
+    padding:12px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    transition:0.3s;
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.08);
+}
 
         td:first-child{
             width:35%;
@@ -122,6 +132,7 @@
             table,
             tbody,
             tr,
+            
             td{
                 display:block;
                 width:100%;
@@ -154,6 +165,16 @@
 
 <div class="container">
 
+<div class="card">
+
+<h2>📖 Informasi Data Dasar Kelompok</h2>
+
+<p style="line-height:1.8;">
+Halaman ini menyajikan data dasar empat kelompok POKLAHSAR yang meliputi identitas kelompok, alamat, lokasi, tanggal pendirian, kelas kelompok, serta informasi legalitas kelompok sebagai dasar pengelolaan dan pengembangan usaha pengolahan hasil perikanan.
+</p>
+
+</div>
+    
     <!-- BUNGA MERAH -->
     <div class="card">
         <h2>🌺 POKLAHSAR BUNGA MERAH</h2>
@@ -233,7 +254,8 @@
 </div>
 
 <footer>
-    Kelompok 3 POKLAHSAR
+© 2026 Sistem Informasi Manajemen Perikanan<br>
+Kelompok 3 POKLAHSAR | Tiaraisya Akbar
 </footer>
 
 </body>
