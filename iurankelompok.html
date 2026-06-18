@@ -168,9 +168,53 @@ footer{
     margin-top:30px;
 }
 
+.summary-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+.summary-content{
+    display:none;
+}
+
+.summary-content.show{
+    display:block;
+}
+
+.arrow{
+    font-size:22px;
+    font-weight:bold;
+}
+
 </style>
 </head>
 
+<script>
+
+function toggleSummary(){
+
+const content =
+document.getElementById("summaryContent");
+
+const arrow =
+document.getElementById("arrow");
+
+content.classList.toggle("show");
+
+if(content.classList.contains("show")){
+    arrow.innerHTML = "▲";
+}else{
+    arrow.innerHTML = "▼";
+}
+
+}
+
+</script>
+    
 <body>
 
 <header>
@@ -190,7 +234,22 @@ Sistem Informasi Manajemen Perikanan
 
 <div class="container">
 
-<!-- BAGIAN 1 -->
+<!-- RINGKASAN PEMBAYARAN KELOMPOK -->
+
+<div class="card">
+
+<div class="summary-header" onclick="toggleSummary()">
+
+<h2>📊 Ringkasan Pembayaran Kelompok</h2>
+
+<span id="arrow" class="arrow">▼</span>
+
+</div>
+
+<div id="summaryContent" class="summary-content">
+
+<!-- BAGIAN TOTAL TABUNGAN -->
+
 <div class="card">
 
 <h2>📈 Total Tabungan Kelompok</h2>
@@ -225,6 +284,8 @@ Sistem Informasi Manajemen Perikanan
 
 </div>
 
+<!-- BAGIAN IURAN WAJIB -->
+
 <div class="card">
 
 <h2>💰 Total Iuran Wajib Kelompok</h2>
@@ -255,6 +316,8 @@ Sistem Informasi Manajemen Perikanan
 
 </div>
 
+<!-- BAGIAN SUKARELA -->
+
 <div class="card">
 
 <h2>🤝 Total Iuran Sukarela Kelompok</h2>
@@ -283,6 +346,9 @@ Sistem Informasi Manajemen Perikanan
 
 </div>
 
+</div>
+
+</div>
 </div>
 
 <!-- BAGIAN 2 -->
