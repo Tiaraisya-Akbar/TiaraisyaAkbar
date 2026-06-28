@@ -26,264 +26,185 @@ body{
     min-height:100vh;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-
     text-align:center;
     padding:35px 20px;
     background:rgba(0,0,0,.20);
-
 }
 
 header h1{
-
     font-size:34px;
     margin-bottom:10px;
-
 }
 
 header h2{
-
-    color:#ffd700;
-    margin-bottom:10px;
     font-size:24px;
-
+    margin-bottom:10px;
+    color:#ffd700;
 }
 
 header p{
-
-    opacity:.95;
-    line-height:1.7;
-
+    font-size:16px;
+    line-height:1.8;
 }
 
-/* TOMBOL */
+/* ================= TOMBOL ================= */
 
 .back-btn{
-
     display:inline-block;
     margin-top:18px;
-    padding:12px 25px;
+    padding:12px 24px;
     border-radius:10px;
-    text-decoration:none;
     background:white;
     color:#1e3c72;
+    text-decoration:none;
     font-weight:bold;
     transition:.3s;
-
 }
 
 .back-btn:hover{
-
     background:#ffd700;
     color:black;
-
 }
 
-/* CONTAINER */
+/* ================= CONTAINER ================= */
 
 .container{
-
     width:95%;
     max-width:1200px;
     margin:35px auto;
-
 }
 
-/* CARD */
+/* ================= CARD ================= */
 
 .card{
-
     background:rgba(255,255,255,.12);
     backdrop-filter:blur(12px);
-
     border-radius:20px;
-
     padding:30px;
-
     margin-bottom:30px;
-
     box-shadow:0 8px 20px rgba(0,0,0,.30);
+}
 
+.card h2,
+.card h3{
+    color:#ffd700;
+    margin-bottom:20px;
 }
 
 .card h2{
-
-    color:#ffd700;
-    margin-bottom:20px;
     font-size:28px;
-
 }
 
 .card h3{
-
-    color:#ffd700;
-    margin-bottom:18px;
     font-size:24px;
-
 }
 
 .card p{
-
+    color:white;
     line-height:1.9;
-
-    color:#f3f3f3;
-
 }
 
-/* GRID */
+/* ================= GRID ================= */
 
 .grid{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
     gap:25px;
-
 }
 
-/* MINI CARD */
+/* ================= BOX ================= */
 
 .box{
-
     background:rgba(255,255,255,.08);
-
-    border-radius:18px;
-
-    padding:25px;
-
-    text-align:center;
-
-    transition:.3s;
-
     border:1px solid rgba(255,255,255,.15);
-
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
 }
 
 .box:hover{
-
-    transform:translateY(-8px);
-
     background:rgba(255,255,255,.15);
-
+    transform:translateY(-5px);
 }
 
 .box h4{
-
     color:#ffd700;
-
     margin:15px 0;
-
     font-size:22px;
-
 }
 
 .box p{
-
-    color:#eee;
-
+    color:white;
+    line-height:1.8;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 
 .btn{
-
-display:inline-block;
-
-margin-top:18px;
-
-padding:12px 24px;
-
-border-radius:10px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-color:white;
-
-transition:.3s;
-
-}
-
-.btn-blue{
-
-background:#1565c0;
-
-}
-
-.btn-green{
-
-background:#2e7d32;
-
+    display:inline-block;
+    margin-top:18px;
+    padding:12px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    transition:.3s;
 }
 
 .btn:hover{
-
-transform:scale(1.05);
-
+    transform:scale(1.05);
 }
 
-/* LOOKER */
+.btn-blue{
+    background:#1565c0;
+}
+
+.btn-green{
+    background:#2e7d32;
+}
+
+/* ================= LOOKER ================= */
 
 .looker{
-
-width:100%;
-
-height:760px;
-
-border:none;
-
-border-radius:18px;
-
-background:white;
-
-margin-top:20px;
-
+    width:100%;
+    height:760px;
+    border:none;
+    border-radius:18px;
+    margin-top:20px;
+    background:white;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-
-margin-top:40px;
-
-text-align:center;
-
-padding:25px;
-
-background:rgba(0,0,0,.25);
-
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.25);
+    margin-top:35px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:768px){
 
 header h1{
-
-font-size:26px;
-
+    font-size:26px;
 }
 
 header h2{
-
-font-size:20px;
-
+    font-size:20px;
 }
 
 .card{
-
-padding:20px;
-
+    padding:20px;
 }
 
 .looker{
-
-height:500px;
-
+    height:500px;
 }
 
 }
@@ -301,15 +222,11 @@ height:500px;
 <h2>Kelompok 3 POKLAHSAR</h2>
 
 <p>
-
 Sistem Informasi Manajemen Perikanan
-
 </p>
 
 <a href="tugasakhir.html" class="back-btn">
-
 ← Kembali ke Menu Utama
-
 </a>
 
 </header>
@@ -338,6 +255,8 @@ komoditas perikanan sehingga dapat diakses dalam satu tempat.
 
 <div class="grid">
 
+<!-- BOX 1 -->
+
 <div class="box">
 
 <i class="fas fa-table"
@@ -365,6 +284,8 @@ Lihat Data
 
 </div>
 
+<!-- BOX 2 -->
+
 <div class="box">
 
 <i class="fas fa-folder-open"
@@ -382,6 +303,8 @@ serta proses analisis informasi.
 
 </div>
 
+<!-- BOX 3 -->
+
 <div class="box">
 
 <i class="fas fa-database"
@@ -392,8 +315,8 @@ style="font-size:60px;color:#ffd700;"></i>
 <p>
 
 Data tersimpan secara terstruktur dan
-terintegrasi menggunakan Google Spreadsheet
-sebagai basis penyimpanan.
+terintegrasi menggunakan Google
+Spreadsheet sebagai basis penyimpanan.
 
 </p>
 
@@ -475,11 +398,8 @@ POKLAHSAR melalui Google Form.
 </p>
 
 <a
-
 href="https://forms.gle/xVM5dooQeRFJxdbT8"
-
 target="_blank"
-
 class="btn btn-blue">
 
 <i class="fas fa-file-signature"></i>
@@ -507,11 +427,8 @@ kuesioner tingkat kepuasan pengguna.
 </p>
 
 <a
-
 href="https://docs.google.com/spreadsheets/d/1bD5gjZcefPRkC5hXqzsrpJNG_MHLVB11MAZ_S3rpB0k/edit?usp=sharing"
-
 target="_blank"
-
 class="btn btn-green">
 
 <i class="fas fa-table"></i>
@@ -539,11 +456,8 @@ dalam format Microsoft Excel.
 </p>
 
 <a
-
 href="tingkatkepuasan.xlsx"
-
 target="_blank"
-
 class="btn btn-green">
 
 <i class="fas fa-download"></i>
@@ -613,6 +527,8 @@ Efficiency, dan Service.
 
 <div class="grid">
 
+<!-- DOWNLOAD -->
+
 <div class="box">
 
 <i class="fas fa-file-excel"
@@ -644,6 +560,8 @@ Download Excel
 
 </div>
 
+<!-- PERFORMANCE -->
+
 <div class="box">
 
 <i class="fas fa-chart-bar"
@@ -660,6 +578,8 @@ kemampuan sistem dalam mengolah data.
 </p>
 
 </div>
+
+<!-- INFORMATION -->
 
 <div class="box">
 
@@ -682,140 +602,21 @@ dan mudah dipahami oleh pengguna.
 
 </div>
 
-<!-- ======================= RINGKASAN SISTEM ======================= -->
-
-<div class="card">
-
-<h2>
-
-<i class="fas fa-chart-simple"></i>
-
-Ringkasan Sistem Informasi
-
-</h2>
-
-<div class="grid">
-
-<div class="box">
-
-<i class="fas fa-users"
-style="font-size:55px;color:#ffd700;"></i>
-
-<h4>4 Kelompok</h4>
-
-<p>
-
-Kelompok POKLAHSAR yang telah
-terintegrasi dalam sistem.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<i class="fas fa-database"
-style="font-size:55px;color:#ffd700;"></i>
-
-<h4>Database Terpusat</h4>
-
-<p>
-
-Semua data tersimpan dalam
-Google Spreadsheet secara
-terintegrasi.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<i class="fas fa-chart-pie"
-style="font-size:55px;color:#ffd700;"></i>
-
-<h4>Dashboard</h4>
-
-<p>
-
-Visualisasi data menggunakan
-Google Looker Studio sehingga
-lebih mudah dianalisis.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<i class="fas fa-star"
-style="font-size:55px;color:#ffd700;"></i>
-
-<h4>Evaluasi Sistem</h4>
-
-<p>
-
-Evaluasi dilakukan menggunakan
-Analisis PIECES dan Tingkat
-Kepuasan Pengguna.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 <!-- ======================= FOOTER ======================= -->
 
 <footer>
 
-<div style="margin-bottom:10px;">
-
-<i class="fas fa-fish"></i>
-<i class="fas fa-water"></i>
-<i class="fas fa-chart-line"></i>
-
-</div>
-
-<h3 style="margin-bottom:10px;">
-Sistem Informasi Manajemen Perikanan
-</h3>
-
-<p style="line-height:1.8;">
-
-Repository ini merupakan bagian dari
-Tugas Akhir Mata Kuliah Sistem Informasi
-Manajemen Perikanan yang mengintegrasikan
-pengelolaan data POKLAHSAR berbasis website.
-
-</p>
-
-<hr style="
-margin:25px auto;
-width:70%;
-border:0;
-border-top:1px solid rgba(255,255,255,.25);
-">
-
 <p>
 
-© 2026 Tiaraisya Akbar <br>
+© 2026 Sistem Informasi Manajemen Perikanan<br>
 
-Program Studi Sosial Ekonomi Perikanan<br>
-
-Fakultas Perikanan dan Ilmu Kelautan
+Tiaraisya Akbar | Kelompok 3 POKLAHSAR
 
 </p>
 
 </footer>
 
 </div>
-<!-- END CONTENT -->
-
-</div>
-<!-- END MAIN -->
 
 <script>
 
@@ -849,4 +650,5 @@ card.style.transform="translateY(0px)";
 </script>
 
 </body>
+
 </html>
